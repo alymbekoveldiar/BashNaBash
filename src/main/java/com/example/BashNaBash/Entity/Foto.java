@@ -27,6 +27,4 @@ public class Foto {
 
     @Column(nullable = false)
     private String path;
-    @OneToOne
-    private Thing thing;
 }

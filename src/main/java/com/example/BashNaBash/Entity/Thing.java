@@ -1,8 +1,8 @@
 package com.example.BashNaBash.Entity;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.web.multipart.MultipartFile;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -19,16 +19,12 @@ public class Thing {
     private String address;
     private String ShortDescription;
     private String PhoneNumber;
-    @OneToOne(mappedBy = "thing")
-    private Foto fotos;
     private String author;
+    private String foto;
     private LocalDateTime CreatelocalDateTime;
-    @PrePersist
-    private void init(){
-        CreatelocalDateTime = LocalDateTime.now();
-    }
 
-    public void addFoto(Foto foto){
-        foto.setThing(this);
+    @PrePersist
+    private void init() {
+        CreatelocalDateTime = LocalDateTime.now();
     }
 }

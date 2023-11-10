@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+  Авторизация
+</div>
+<div>
+  You have been logged out.
+</div>
+<form th:action="@{/login}" method="post">
+  <div><label> Gmail : <input type="text" name="username"/> </label></div>
+  <div><label> Password: <input type="password" name="password"/> </label></div>
+  <div><input type="submit" value="Вход"/></div>
+</form>
+<a  href="/templates/registr.html">Зарегестрироваться</a>
+</body>
+</html>
